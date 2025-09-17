@@ -1,0 +1,134 @@
+@font-face{
+    font-family:'Kunstler';
+    src: url('fonts/KUNSTLER.TTF');
+}
+
+body{
+    background:white;
+}
+
+
+h1{
+    font-family:'Kunstler', sans-serif;
+    font-size:8vw;
+}
+
+
+/* GRIDSSS*/ 
+#frame{
+    display:grid;
+    grid-template-rows:10;
+    grid-template-columns:16;
+    height:90%;
+    width:95%;
+    background-image:url(images/summerbackground.JPG);
+    background-size:cover;
+}
+.red{
+background:pink;
+}
+.white{
+
+}
+.blue{
+background:pink;
+}
+.yellow{
+background:pink;
+}
+
+#pic1{
+grid-column-start:1;
+grid-column-end:4;
+grid-row-start:1;
+grid-row-end:6;
+background-image:url(images/summer11.JPG);
+background-size:contain;
+background-repeat:no-repeat;
+}
+
+#windoww{
+    grid-column-start:4;
+grid-column-end:8;
+grid-row-start:4;
+grid-row-end:6;
+background-image:url(images/summerwindow.png);
+background-size:contain;
+background-repeat:no-repeat;
+}
+#pic2{
+grid-column-start:6;
+grid-column-end:11;
+grid-row-start:1;
+grid-row-end:5;
+background-image:url(images/summer13.JPG);
+background-size:cover;
+/* background-repeat:no-repeat; */
+}
+#pic3{
+ grid-column-start:1;
+grid-column-end:10;
+grid-row-start:9;
+grid-row-end:11;
+background-image:url(images/summer10.JPG);
+background-size:contain;
+background-repeat:no-repeat;
+}
+#pic4{
+    grid-column-start:12;
+grid-column-end:16;
+grid-row-start:1;
+grid-row-end:7;
+background-image:url(images/summer12.JPG);
+background-size:contain;
+background-repeat:no-repeat;
+}
+
+#pic5{
+    grid-column-start:9;
+grid-column-end:17;
+grid-row-start:7;
+grid-row-end:11;
+background-image:url(images/summerwindow.png);
+background-size:contain;
+background-repeat:no-repeat;
+}
+
+#pic6{
+
+grid-column-start:16;
+grid-column-end:17;
+grid-row-start:2;
+grid-row-end:9;
+background:pink;
+background-image:url(images/summer14.JPG);
+background-size:contain;
+background-repeat:no-repeat;
+}
+#summertext{
+    grid-column-start:7;
+grid-column-end:16;
+grid-row-start:9;
+grid-row-end:11;
+z-index:1000;
+text-align:right;
+margin:0%;
+padding:0%;
+}
+#pic7{
+    grid-column-start:9;
+grid-column-end:12;
+grid-row-start:5;
+grid-row-end:7;
+background-image:url(images/summer15.JPG);
+background-size:cover;
+background-position:55%;
+
+}
+#nav{
+        grid-column-start:1;
+grid-column-end:1;
+grid-row-start:9;
+grid-row-end:10;
+padding-top:2%;
+}

@@ -1,0 +1,39 @@
+
+body{
+font-family:comic, sans-serif;
+background-color: #fafafa; 
+color:#333;
+line-height:1.6;
+}
+
+img{
+max-width: 100%;
+}
+
+.section{
+border-left: 6px solid #e56020;
+width:80%;
+margin: 20px auto;
+padding:20px;
+border-radius: 10px;
+box-shadow: 2px 2px 6px rgba(0,0,0,0.1);
+background:#fff;
+}
+
+.highlight {
+    background-color:#fff8dc;
+    padding: 5px;
+    font-weight:bold;
+    border-radius: 5px;
+}
+
+a{
+    color: #5a2d81;
+    font-weight:bold;
+    text-decoration:none;
+   
+}
+     a:hover{
+        color: #e56020;
+        text-decoration:underline;
+     }

@@ -1,0 +1,27 @@
+body{
+    font-family:Helvetica,sans-serif; 
+    font-weight:lighter;
+    background-color:rgb(182, 198, 182);
+}
+
+h4{
+    font-size:18px;
+    color:olivedrab;
+
+}
+a{
+    color:pink;
+}
+a:hover{
+    color:red;
+}
+.section{
+    max-width:600px;
+    text-align:left;
+    background:rgba(255,255,255,0.8);
+    box-shadow: 2px 2px 6px rgba(255,255,255,0.9);
+    border-radius:10px;
+    margin:10px auto;
+    padding:20px;
+justify-content:center;
+}
