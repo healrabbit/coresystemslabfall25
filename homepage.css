@@ -1,0 +1,50 @@
+body{
+overflow-x: hidden;
+}
+
+p{
+    font-family:"Helvetica",sans-serif;
+}
+.frame{
+display:grid;
+grid-template-columns: 35% 35% 30% ;
+grid-template-rows: 1;
+}
+
+#labproj1{
+grid-column-start:1;
+grid-column-end:2;
+}
+#tbaproject{
+  grid-column-start:2;
+grid-column-end:3;  
+}
+#title{
+ grid-column-start:3;
+grid-column-end:4;
+overflow-wrap:break-word;
+max-width:100%;
+text-align:right;
+ font-family:"Helvetica",sans-serif;
+color:pink;
+font-size:2.5vw;
+}
+span{
+  font-family:"Helvetica",sans-serif;
+color:pink;
+font-size:18;
+overflow-wrap:break-word;
+}
+.link{
+    transition-duration: 0.5s;
+    padding:7%;
+    width:max-content;
+}
+a{
+    text-decoration:none;
+}
+.link:hover{
+transform:scale(1.1);
+transform-origin: center;
+transition-duration: 0.5s;
+}
