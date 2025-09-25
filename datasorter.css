@@ -1,0 +1,66 @@
+ body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+        }
+    #grid{
+ display:grid;
+    grid-template-rows:2;
+    grid-template-columns:repeat(2,minmax(0,1fr));
+    height:100%;
+    width:100%;
+    }
+    #title{
+        grid-column-start: 2;
+        grid-row-start:1 ;
+        font-family:'Helvetica', sans-serif;
+        font-weight:bold;
+        font-size:250%;
+        text-overflow:wrap;
+        text-align:right;
+        padding-right:2%;
+    }
+    #list{
+        grid-column-start: 1;
+        grid-row-start:1 ; 
+        grid-row-end:3; 
+        height:90%;
+font-size:11px;
+line-height: 0.3;
+margin-left:2%;
+ font-family:'Helvetica', sans-serif;
+    }
+    #trash{
+        align-content:right;
+        vertical-align:bottom;
+        margin-left:60%;
+        margin-top:40%;
+        grid-column-start:2;
+        grid-row-start:2;
+        width:200px;
+    }
+        .draggable {
+            width: 100px;
+            height: 100px;
+            background-color: transparent;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 10px;
+            cursor: pointer;
+            user-select: none; /* Prevent text selection while dragging */
+           
+        }
+a{
+    color:black;
+}
+        a:visited{
+            color:black;
+        }
+
+        a:hover{
+            color:red;
+        }
