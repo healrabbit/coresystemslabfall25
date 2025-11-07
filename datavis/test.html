@@ -1,0 +1,88 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Hover Test</title>
+<style>
+  html,body { height:100%; margin:0; }
+  .container { width:100vw; height:100vh; overflow:hidden; position:relative; background:#222; }
+  .background {
+    position:absolute;
+    inset:0;
+    background-image: url('assets/citysystembg.png'); /* your bg */
+    background-size:cover;
+    z-index:0; /* make sure background is behind */
+  }
+
+  /* clickable item (anchor) */
+  .item {
+    position:absolute;
+    left:50%;
+    top:50%;
+    transform:translate(-50%,-50%);
+    z-index:20; /* must be above bg */
+    display:block;
+    pointer-events:auto;
+  }
+
+  .itemimg {
+    height:20vh;
+    display:block;
+    pointer-events:auto;
+  }
+
+  /* debugging overlay so you can see the clickable hotspot */
+  .item::after{
+    content:"";
+    position:absolute;
+    left:50%;
+    top:50%;
+    transform:translate(-50%,-50%);
+    width: calc(20vh + 8px);
+    height: calc(20vh + 8px);
+    border: 2px dashed rgba(255,255,255,0.15);
+    border-radius:8px;
+    pointer-events:none;
+  }
+</style>
+</head>
+<body>
+  <div class="container">
+    <div class="background"></div>
+
+    <!-- anchor + image with inline handlers -->
+    <a class="item" href="#" id="testLink" style="left:40%; top:54%;">
+      <img id="testImg" class="itemimg"
+           src="assets/item1.png"
+           onmouseenter="this.src='assets/item1.gif'"
+           onmouseleave="this.src='assets/item1.png'"
+           alt="test">
+    </a>
+
+  </div>
+
+  <script>
+    // Preload hover image
+    const preload = new Image();
+    preload.src = 'assets/item1.gif';
+
+    // Add JS listeners that log to console — helps debugging
+    const img = document.getElementById('testImg');
+    img.addEventListener('mouseenter', () => {
+      console.log('mouseenter fired, swapping to gif');
+      img.src = 'assets/item1.gif';
+    });
+    img.addEventListener('mouseleave', () => {
+      console.log('mouseleave fired, swapping to png');
+      img.src = 'assets/item1.png';
+    });
+
+    // Extra safety: log computed stacking context & pointer-events
+    const link = document.getElementById('testLink');
+    console.log('link z-index:', getComputedStyle(link).zIndex);
+    console.log('img pointer-events:', getComputedStyle(img).pointerEvents);
+    console.log('background z-index:', getComputedStyle(document.querySelector('.background')).zIndex);
+  </script>
+</body>
+</html>

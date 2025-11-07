@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Items On The Ground On My Walk To The Train</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+
+
+<div class="container">
+  <div class="background">
+        <h1 class="title">Items On The Ground On My Walk To The Train</h1>
+    <img class="bg-img" src="assets/citysystembg.png">
+
+
+<a class="item" href="twincups.html" style="left: 10%; top: 54%;"> <img class="itemimg" src="assets/item1.png"
+   onmouseenter="this.src='assets/item1.gif'" onmouseleave="this.src='assets/item1.png'"> </a>
+
+<a class="item" href="eggcarton.html" style="left: 14%; top: 75%;"> <img class="itemimg" src="assets/item2.png" 
+  onmouseenter="this.src='assets/item2.gif'" onmouseleave="this.src='assets/item2.png'"> </a>
+
+  <a class="item" href="noodlebowl.html" style="left: 30%; top: 65%;"> <img class="itemimg" src="assets/item1.png"
+   onmouseenter="this.src='assets/item1.gif'" onmouseleave="this.src='assets/item1.png'"> </a>
+
+     <a class="item" href="sale.html" style="left: 52%; top: 62%;"> <img class="itemimg" src="assets/item1.png"
+   onmouseenter="this.src='assets/item1.gif'" onmouseleave="this.src='assets/item1.png'"> </a>
+
+
+     <a class="item" href="bluevelvet.html" style="left: 25%; top: 54%;"> <img class="itemimg" src="assets/item3.png"
+   onmouseenter="this.src='assets/item3.gif'" onmouseleave="this.src='assets/item3.png'"> </a>
+    <a class="item" href="banana.html" style="left: 61%; top: 55%;"> <img class="itemimg" src="assets/item1.png"
+   onmouseenter="this.src='assets/item1.gif'" onmouseleave="this.src='assets/item1.png'"> </a>
+
+     <a class="item" href="yogurt.html" style="left: 68%; top: 70%;"> <img class="itemimg" src="assets/item3.png"
+   onmouseenter="this.src='assets/item3.gif'" onmouseleave="this.src='assets/item3.png'"> </a>
+
+        <a class="item" href="flosspick.html" style="left: 78%; top: 62%;"> <img class="itemimg" src="assets/item3.png"
+   onmouseenter="this.src='assets/item3.gif'" onmouseleave="this.src='assets/item3.png'"> </a>
+
+       <a class="item" href="doggybag.html" style="left: 75%; top: 68%;"> <img class="itemimg" src="assets/item1.png"
+   onmouseenter="this.src='assets/item1.gif'" onmouseleave="this.src='assets/item1.png'"> </a>
+
+   <a href="../index.html" class="home" style="left: 90%; top: 90%;"> home </a>
+</div>
+</div>
+
+<script>
+      const scrollContainer = document.querySelector('.container');
+    const background = document.querySelector('.background');
+
+    scrollContainer.addEventListener('scroll', () => {
+        const scrollLeft = scrollContainer.scrollLeft;
+        const maxScrollLeft = scrollContainer.scrollWidth - scrollContainer.clientWidth;
+
+        const scrollPercentage = (scrollLeft / maxScrollLeft) * 100;
+
+       
+        background.style.backgroundPositionX = `${-scrollPercentage * 0.5}%`;
+    });
+</script>
+</body>
+</html>
